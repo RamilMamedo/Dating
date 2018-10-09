@@ -1,0 +1,30 @@
+/*!
+=====================================================
+               =   Reviews Page   =
+=====================================================
+*/
+
+.reviews {
+  margin: 50px 0 65px;
+  .partners-table {
+    .partners-table--item {
+      .partner-info {
+        max-width: 530px;
+        max-height: 80px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: justify;
+        line-height: normal;
+        font-size: $ftz-extra-small;
+        color: #7b7b7b;
+        .partner-link {
+          display: block;
+          text-align: left;
+          margin-top: 5px;
+          text-transform: capitalize;
+          font-size: $ftz-extra-small;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+/*!
+=====================================================
+                =   Info Pages    =
+=====================================================
+*/
+
+.info-pages {
+  margin: 30px 0 100px;
+  .page-text {
+    padding: 60px;
+    color: #333;
+    text-align: justify;
+    font-size: $ftz-normal;
+    background-color: $white;
+    border: 1px solid #e8e8e8;
+    word-break: break-word;
+    h1 {
+      font-size: 35px;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    h2 {
+      font-size: 28px;
+      margin-bottom: 0.5em;
+    }
+  }
+}

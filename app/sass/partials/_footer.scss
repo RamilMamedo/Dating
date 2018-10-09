@@ -1,0 +1,117 @@
+/*!
+=====================================================
+               =   Site Bottom   =
+=====================================================
+*/
+
+.site-bottom {
+  color: $white;
+  background-color: $blue;
+  &:hover {
+    .btn-yes {
+      animation-name: heartbeat;
+      animation-duration: 0.8s;
+    }
+  }
+  .site-bottom--content {
+    position: relative;
+    padding: 75px 0 75px 335px;
+    text-align: center;
+    background-image: url('../img/bottom-couple.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    h1 {
+      font-size: 35px;
+      font-weight: bold;
+      line-height: 53px;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: $ftz-small;
+      font-weight: $fw-300;
+      max-width: 543px;
+      margin: 0 auto 30px;
+      line-height: 21px;
+    }
+    .btn-groupe {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      .btn-yes,
+      .btn-no {
+        width: 226px;
+        padding: 10px 30px;
+        margin: 0 auto;
+        font-size: $ftz-small;
+      }
+
+      .btn-no {
+        margin-top: 11px;
+        background-color: transparent;
+        background-image: unset;
+        border: 3px solid $white;
+      }
+    }
+    .bottom-hearts {
+      position: absolute;
+      top: -85px;
+      right: -60px;
+    }
+  }
+}
+
+/*!
+=====================================================
+               =   Footer   =
+=====================================================
+*/
+
+.footer {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .copyright,
+    .navbar-brand,
+    .nav-item {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+    .copyright {
+      font-size: $ftz-small;
+      color: $footer-link-color;
+    }
+    .navbar-brand {
+      padding: 24px 0;
+      text-align: center;
+      .nav-logo {
+        display: inline-block;
+        img {
+          width: 132px;
+          height: 52px;
+        }
+      }
+    }
+    .navbar-nav {
+      display: flex;
+      .nav-item {
+        display: inline-block;
+        margin-right: 15px;
+        .nav-link {
+          color: $footer-link-color;
+          text-decoration: none;
+          text-transform: capitalize;
+          font-size: $ftz-small;
+          white-space: nowrap;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

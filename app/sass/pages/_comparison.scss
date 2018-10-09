@@ -1,0 +1,154 @@
+/*!
+=====================================================
+                =   Comparison   =
+=====================================================
+*/
+
+.comparison {
+  margin: 50px 0 140px;
+  .comparison-table {
+    position: relative;
+    overflow: hidden;
+    .table-nav {
+      a {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        overflow: hidden;
+        text-indent: 100%;
+        white-space: nowrap;
+        color: transparent;
+        height: 40px;
+        width: 40px;
+        background: $border-c url('../img/arrow.svg') no-repeat center center;
+        transition: background-color 0.3s, opacity 0.3s, visibility 0.3s,
+          transform 0.3s;
+        opacity: 1;
+      }
+      &.inactive {
+        opacity: 0;
+      }
+      &.next {
+        right: 0;
+        transform: translateY(80px);
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+      }
+      &.prev {
+        left: 0;
+        transform: translateY(80px) rotate(180deg);
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+      }
+    }
+    .top-info {
+      width: 160px;
+      height: 170px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .partner-button {
+        margin-top: 30px;
+        .btn {
+          padding: 9px 16px;
+        }
+      }
+    }
+    .table-sections {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 116px;
+      .top-info {
+        border-left: none;
+        position: relative;
+        z-index: 50;
+        width: 116px;
+        background-color: #f4f7f9;
+      }
+      li {
+        background-color: #f4f7f9;
+        border-right: solid 1px $border-c !important;
+        width: 116px;
+      }
+      .black-info {
+        border-right: 1px solid #333 !important;
+      }
+    }
+    .comparison--features {
+      border-top: 10px solid #f4f7f9;
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        font-size: $ftz-small;
+        text-transform: capitalize;
+        padding: 10px;
+        color: #4b5874;
+        line-height: 21px;
+        text-align: center;
+        border: solid 1px $border-c;
+        border-bottom: 0;
+        border-right: 0;
+        &.black-info {
+          border: 0;
+          border-right: 0.1px solid #333;
+          color: $white;
+          background-color: #000;
+        }
+        &:last-child {
+          border-bottom: solid 1px $border-c;
+        }
+      }
+    }
+    .comparison--items {
+      overflow-x: auto;
+      .top-info {
+        border: 1px solid $border-c;
+        border-right: 0;
+      }
+      .comparison--cols {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 116px;
+        .product {
+          position: relative;
+          width: 160px;
+          text-align: center;
+          background-color: $white;
+          transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+          .partner-logo {
+            img {
+              height: 45px;
+              width: 120px;
+            }
+          }
+          .rating--link {
+            padding: 10px 10px 20px 10px;
+          }
+          .builder--btn {
+            padding: 0 10px;
+          }
+          &:first-child {
+            li {
+              border-left: 0;
+            }
+          }
+          &:last-child {
+            li {
+              border-right: solid 1px $border-c;
+            }
+            .black-info {
+              border-right: solid 1px #000;
+            }
+            .top-info {
+              border-right: solid 1px $border-c;
+            }
+          }
+        }
+      }
+    }
+  }
+}
