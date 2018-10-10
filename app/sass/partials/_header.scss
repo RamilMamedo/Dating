@@ -36,6 +36,8 @@
             color: $blue;
           }
           &.active {
+            cursor: default;
+            color: $black;
             font-weight: $fw-600;
           }
         }

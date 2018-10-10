@@ -7,6 +7,7 @@
 .site-bottom {
   color: $white;
   background-color: $blue;
+  margin-top: 200px;
   &:hover {
     .btn-yes {
       animation-name: heartbeat;

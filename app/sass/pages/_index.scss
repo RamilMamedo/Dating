@@ -23,80 +23,45 @@
   .filter-block {
     margin: 20px 0;
     position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    height: 17px;
     line-height: 17px;
+    font-size: $ftz-extra-small;
     span {
+      display: inline-block;
       color: $black;
-      font-size: $ftz-extra-small;
       margin-right: 18px;
     }
     .checkbox-block {
       display: inline-block;
       margin-right: 20px;
-      .styled-checkbox {
-        display: inline-block;
-        position: absolute;
-        opacity: 0;
-        & + label {
-          position: relative;
-          cursor: pointer;
-          padding: 0;
-          font-size: $ftz-extra-small;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-          color: $black;
-          margin-bottom: 0;
-          &:before {
-            content: '';
-            margin-right: 7px;
-            display: inline-block;
-            vertical-align: sub;
-            width: 13px;
-            height: 13px;
-            background: 0 0;
-            border: 1px solid $blue;
-            border-radius: 2px;
-          }
-          &:hover + label:before {
-            border-color: #1976d2;
-          }
-          &:focus + label:before {
-            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.12);
-          }
-        }
+      label {
       }
     }
 
-    .styled-checkbox:checked + label {
-      color: $black;
-    }
+    // .styled-checkbox:checked + label {
+    //   color: $black;
+    // }
 
-    .styled-checkbox:checked + label:before {
-      background-size: 13px 9px;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-    }
+    // .styled-checkbox:checked + label:before {
+    //   background-size: 13px 9px;
+    //   background-repeat: no-repeat;
+    //   background-position: 50% 50%;
+    // }
 
-    .styled-checkbox:disabled + label {
-      color: #b8b8b8;
-      cursor: auto;
-    }
+    // .styled-checkbox:disabled + label {
+    //   color: #b8b8b8;
+    //   cursor: auto;
+    // }
 
-    .styled-checkbox:disabled + label:before {
-      box-shadow: none;
-      background-color: #ddd;
-    }
+    // .styled-checkbox:disabled + label:before {
+    //   box-shadow: none;
+    //   background-color: #ddd;
+    // }
 
-    .styled-checkbox:checked + label:before {
-      background-image: url(../img/checked-white.png);
-      background-color: #1976d2;
-      border-color: #1976d2;
-    }
+    // .styled-checkbox:checked + label:before {
+    //   background-image: url(../img/checked-white.png);
+    //   background-color: #1976d2;
+    //   border-color: #1976d2;
+    // }
   }
 }
 
@@ -108,56 +73,56 @@
 
 .index {
   .index-main-side {
-    width: 700px;
+    width: 864px;
     .partners-table {
       .partners-table--item {
-        .partner-logo,
-        .partner-deposit-options,
-        .partner-info,
+        .partner-rank,
         .partner-button,
         .partner-logo {
+          color: $black;
           text-align: center;
         }
-        .partner-deposit-options {
-          max-width: 50px;
-          img:first-child {
-            margin-bottom: -12.5px;
+        .partner-info {
+          max-width: 333px;
+          .icons {
+            i {
+            }
+          }
+          .highlights {
+            ul {
+              li {
+                font-size: $ftz-extra-small;
+                line-height: 17px;
+                display: inline-block;
+                &::before {
+                  content: '';
+                }
+              }
+            }
           }
         }
-        .partner-info {
-          max-width: 165px;
-          font-size: $ftz-normal;
-          color: #4a4a4a;
-        }
-      }
-      .partners-table--item:first-child {
-        position: relative;
-        .editors-pick {
-          display: block;
-          color: $white;
-          text-transform: uppercase;
-          text-indent: 8px;
-          line-height: 18px;
-          font-size: $ftz-extra-small;
-          width: 122px;
-          height: 20px;
-          position: absolute;
-          top: 15px;
-          left: 0;
-          background-image: url('../img/editors-pick.svg');
-          background-repeat: no-repeat;
+       
+        .partner-button {
+          position: relative;
+          .btn {
+            padding: 12px 41.5px;
+            font-size: $ftz-large;
+            font-weight: $fw-600;
+            line-height: 20px;
+          }
         }
       }
     }
     .index-bottom-text {
-      text-align: justify;
-      font-size: $ftz-normal;
-      color: #3a3a3a;
+      color: $black;
+      font-size: $ftz-small;
       margin: 45px 0px 0 0;
       h1 {
-        margin-bottom: 20px;
-        font-size: 26px;
+        color: $blue;
         font-weight: $fw-600;
+        font-size: $ftz-extra-large;
+        line-height: 30px;
+        margin-bottom: 11px;
       }
       p {
         margin-bottom: 1em;
@@ -165,52 +130,39 @@
     }
   }
   .index-aside {
-    width: 220px;
-    margin-left: 20px;
-    color: #333;
+    width: 286px;
+    margin-left: 10px;
+    padding: 0 0 12px;
+    color: $black;
     background-color: $white;
-    padding: 21px 0px 18px 0px;
-    h4 {
-      margin: 0 10px 0 14px;
-      font-weight: $fw-700;
-      font-size: $ftz-extra-small;
-      text-transform: uppercase;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
+    h1 {
+      padding: 15px 15px 5px;
+      margin: 0;
+      color: $blue;
+      font-weight: $fw-600;
+      font-size: $ftz-extra-large;
     }
     .question {
-      h6 {
-        color: #002339;
-        position: relative;
-        text-indent: 1px;
-        margin: 0 20px 0 32px;
-        font-size: $ftz-normal;
-        font-weight: $fw-400;
-        .toggle-icon {
-          cursor: pointer;
-          display: block;
-          position: absolute;
-          top: 5px;
-          left: -20px;
-          width: 15px;
-          height: 15px;
-          border-radius: 50%;
-          color: $white;
-          line-height: 1;
-          text-align: center;
-          font-size: $ftz-small;
-          background-color: $blue;
-        }
+      padding: 10px 30px 10px 14px;
+      h3 {
+        font-size: $ftz-small;
+        font-weight: $fw-500;
       }
       p {
-        display: none;
-        color: #4e4d4d;
-        margin: 5px 25px 0 32px;
+        line-height: 17px;
         font-size: $ftz-extra-small;
+        margin-bottom: 2px;
       }
-      &:last-of-type {
-        hr {
-          display: none;
-        }
+      a {
+        color: $blue;
+        font-size: $ftz-extra-small;
+        line-height: 23px;
       }
+    }
+    .question:nth-child(odd) {
+      padding: 10px 30px 10px 14px;
+      background-color: #f9f9f9;
     }
   }
 }
