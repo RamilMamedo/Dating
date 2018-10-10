@@ -174,6 +174,7 @@ Scripts = () => {
     gulp
       .src([
         './app/libs/jquery/jquery.min.js',
+        './app/libs/swiper/swiper.min.js',
         './app/libs/resizeSensor.js',
         './app/libs/stickySidebar.js',
         './app/libs/comparisonTable.js',

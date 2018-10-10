@@ -10,12 +10,14 @@
 }
 
 .review-article-content {
+  position: relative;
   width: 620px;
   padding: 0 0 0 50px;
-  background-color: $white;
+  color: $black;
   font-size: $ftz-small;
   line-height: 19px;
-  color: $black;
+  background-color: $white;
+  border-left: 3px solid #e9e9e9;
   h1 {
     font-size: 26px;
     font-weight: $fw-500;
@@ -24,7 +26,17 @@
   p {
     margin-bottom: 1em;
   }
-  border-left: 3px solid #e9e9e9;
+  span.arrow-up {
+    cursor: pointer;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: -3px;
+    left: -17px;
+    background-image: url('../img/layers/arrow-up.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 .item-review-mobile {
   display: none;

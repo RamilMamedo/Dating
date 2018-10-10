@@ -1,0 +1,44 @@
+.faq-accordion {
+  width: 620px;
+  padding: 22px 0 12px;
+  margin-left: 50px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  .question {
+    h6 {
+      cursor: pointer;
+      color: #002339;
+      position: relative;
+      margin: 0 20px 0 32px;
+      font-size: $ftz-normal;
+      font-weight: $fw-600;
+      .toggle-icon {
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: -20px;
+        height: 13px;
+        width: 13px;
+        background-image: url('../img/layers/toggle+.svg');
+        &.active {
+          background-image: url('../img/layers/toggle-.svg');
+        }
+      }
+    }
+    p {
+      display: none;
+      color: #4e4d4d;
+      margin: 5px 25px 0 32px;
+      font-size: $ftz-extra-small;
+    }
+    &:first-of-type {
+      p {
+        display: block;
+      }
+    }
+    &:last-of-type {
+      hr {
+        display: none;
+      }
+    }
+  }
+}

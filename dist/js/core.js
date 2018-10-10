@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   $('.question h6').click(function () {
-    $(this).children().text($(this).children().text() == '+' ? '-' : '+');
     $(this).next('.content').slideToggle();
+    $(this).children().toggleClass("active");
   });
 
   // Sticky Sidebar
@@ -61,6 +61,23 @@ document.addEventListener('DOMContentLoaded', function () {
     for (i = 0; i < onStar; i++) {
       $(stars[i]).addClass('selected');
     }
+  });
+  //  Swiper
+  var swiper = new Swiper('.swiper-container', {
+    pagination: {
+      el: '.swiper-pagination',
+      draggable: true,
+      clickable: true,
+      grabCursor: true,
+      autoplay: {
+        delay: 1000
+      }
+    }
+  });
+
+  $('.arrow-up').on("click", function () {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
   });
 
   // Filtering reviews - function

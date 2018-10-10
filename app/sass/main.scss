@@ -157,10 +157,10 @@
   height: 565px;
   text-align: center;
   margin-right: 50px;
-  background-image: url('../img/layers/article-bc.png');
   border-radius: $border-radius-10;
   padding-top: 28px;
   .card-item {
+    cursor: grab;
     font-size: $ftz-extra-small;
     padding: 21px 50px;
     margin: 0px 87px 58px;
@@ -183,6 +183,9 @@
       font-weight: $fw-600;
       border-radius: $border-radius-5;
     }
+  }
+  .swiper-pagination {
+    bottom: 15px
   }
 }
 

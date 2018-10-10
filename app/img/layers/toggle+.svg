@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+<g fill="none" fill-rule="evenodd">
+<g transform="translate(-694 -779)">
+<g transform="translate(681 562)">
+<g transform="translate(12 216)">
+<polygon points="0 0 15 0 15 15 0 15"/>
+<path d="m7.5 1.25c-3.45 0-6.25 2.8-6.25 6.25s2.8 6.25 6.25 6.25 6.25-2.8 6.25-6.25-2.8-6.25-6.25-6.25zm3.125 6.875h-2.5v2.5h-1.25v-2.5h-2.5v-1.25h2.5v-2.5h1.25v2.5h2.5v1.25z" fill="#3561A4" fill-rule="nonzero"/>
+</g>
+</g>
+</g>
+</g>
+</svg>
