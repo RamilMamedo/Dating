@@ -1,0 +1,21 @@
+//= ./layouts/head.html
+//= ./layouts/partials/header.html
+
+<!-- 404 -->
+<section class="page-banner">
+    <div class="container">
+        <div class="banner-wrapper">
+            <div class="error-404">
+                <h1>404</h1>
+                <p>{% get_string 'We Cannot Find A Page You Are Looking For' %}.</p>
+                <div class="partner-button">
+                    <a class="btn" href="" target="_blank" rel="noopener" data-goal-name="{{ item.name }}">{% get_string 'Go To The Home Page' %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /404 -->
+
+//= ./layouts/partials/footer.html
+//= ./layouts/bottom.html

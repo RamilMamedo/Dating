@@ -27,9 +27,8 @@ $footer-link-color: #4a4a4a;
 $border-c: #cecedb;
 //
 // Utilities
+$sticky-sidebar-w: 436px;
 $border-radius-10: 10px;
 $border-radius-5: 5px;
-$transition: 0.3s ease;
+$transition: all 0.3s ease;
 $transparent: rgba(0, 0, 0, 0.01);
-$box-shadow: 0 0 8px 0 rgba(0,0,0,0.08);
-$gradient: linear-gradient(270deg, #D14045 0%, #901119 100%);

@@ -25,43 +25,64 @@
     position: relative;
     line-height: 17px;
     font-size: $ftz-extra-small;
-    span {
+    label {
       display: inline-block;
       color: $black;
       margin-right: 18px;
     }
     .checkbox-block {
       display: inline-block;
+      position: relative;
+      padding-left: 19px;
       margin-right: 20px;
-      label {
+      cursor: pointer;
+      font-size: $ftz-extra-small;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkmark {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        height: 13px;
+        width: 13px;
+        background-color: transparent;
+        border: 1px solid $blue;
+        border-radius: 2px;
+        &::after {
+          content: '';
+          position: absolute;
+          display: none;
+        }
+        &:after {
+          left: 5px;
+          top: 0.5px;
+          width: 4px;
+          height: 11px;
+          border: solid $white;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+      }
+      &:hover input ~ .checkmark {
+        background-color: #fff;
+      }
+      input:checked ~ .checkmark {
+        background-color: $blue;
+        border: 0px solid transparent;
+      }
+      input:checked ~ .checkmark:after {
+        display: block;
       }
     }
-
-    // .styled-checkbox:checked + label {
-    //   color: $black;
-    // }
-
-    // .styled-checkbox:checked + label:before {
-    //   background-size: 13px 9px;
-    //   background-repeat: no-repeat;
-    //   background-position: 50% 50%;
-    // }
-
-    // .styled-checkbox:disabled + label {
-    //   color: #b8b8b8;
-    //   cursor: auto;
-    // }
-
-    // .styled-checkbox:disabled + label:before {
-    //   box-shadow: none;
-    //   background-color: #ddd;
-    // }
-
-    // .styled-checkbox:checked + label:before {
-    //   background-image: url(../img/checked-white.png);
-    //   background-color: #1976d2;
-    //   border-color: #1976d2;
-    // }
   }
 }
 
@@ -85,7 +106,47 @@
         .partner-info {
           max-width: 333px;
           .icons {
-            i {
+            width: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0;
+            .icon {
+              cursor: pointer;
+              position: relative;
+              .tooltip-text {
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                z-index: 1;
+                bottom: 150%;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 5px 15px;
+                text-align: center;
+                font-size: $ftz-mini;
+                color: $white;
+                background-color: $black;
+                border-radius: $border-radius-5;
+                white-space: nowrap;
+                transition: $transition;
+                &::after {
+                  content: '';
+                  position: absolute;
+                  top: 100%;
+                  left: 50%;
+                  margin-left: -5px;
+                  border-width: 5px;
+                  border-style: solid;
+                  border-color: $black transparent transparent transparent;
+                }
+              }
+              &:hover {
+                .tooltip-text {
+                  visibility: visible;
+                  opacity: 1;
+                }
+              }
             }
           }
           .highlights {
@@ -96,12 +157,17 @@
                 display: inline-block;
                 &::before {
                   content: '';
+                  display: inline-block;
+                  width: 11px;
+                  height: 9px;
+                  margin-right: 5px;
+                  background-image: url('../img/layers/heartbullet.svg');
                 }
               }
             }
           }
         }
-       
+
         .partner-button {
           position: relative;
           .btn {

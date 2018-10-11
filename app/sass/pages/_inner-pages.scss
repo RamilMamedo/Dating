@@ -7,6 +7,10 @@
 .review-inner,
 .article-inner {
   margin: 30px 0 100px;
+  .sticky-sidebar {
+    width: $sticky-sidebar-w;
+    margin-right: 50px;
+  }
 }
 
 .review-article-content {
@@ -72,5 +76,17 @@
     @media only screen and (max-width: 768px) {
       font-size: 32px;
     }
+  }
+}
+
+.review-page-banner {
+  .banner-wrapper {
+    padding: 25px 0;
+  }
+  .rating-stars {
+    margin-bottom: 24px;
+  }
+  .partner-logo {
+    border: 1px solid $white;
   }
 }

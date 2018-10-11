@@ -95,10 +95,13 @@
                 </div>
                 <div class="banner-widget">
                     <div class="laptop">
-                        <!-- <img src="img/laptop-datingde.png" alt=""> -->
+                        <img src="img/laptop.png" alt="">
+                        <div class="laptop-content">
+                            <img src="https://picsum.photos/335/220/?random" alt="">
+                        </div>
                     </div>
                     <div class="phone">
-                        <!-- <img src="img/layers/phone.svg" alt=""> -->
+                        <img src="img/phone.png" alt="">
                     </div>
                 </div>
             </div>
@@ -115,24 +118,24 @@
                 ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                 fugiat nulla pariatur.</p>
             <div class="filter-block">
-                <span>Filter By:</span>
-                <div class="checkbox-block">
-                    <label for="styled-checkbox-403">Software</label>
-                </div>
-                <div class="checkbox-block">
-                    <label for="styled-checkbox-402">Sofort Spielen</label>
-                </div>
+                <label>Filter By:</label>
 
-                <div class="checkbox-block">
-                    <label for="styled-checkbox-399">VIP</label>
-                </div>
-
-                <div class="checkbox-block">
-                    <label for="styled-checkbox-398">Live</label>
-                </div>
-                <div class="checkbox-block">
-                    <label for="styled-checkbox-397">Mobil</label>
-                </div>
+                <label class="checkbox-block">Compatibility Test
+                    <input class="table-filter-checkbox" type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-block">Matchmaking
+                    <input class="table-filter-checkbox" type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-block">Photo Search
+                    <input class="table-filter-checkbox" type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-block">Mobil App
+                    <input class="table-filter-checkbox" type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
             </div>
         </div>
     </section>
@@ -146,16 +149,28 @@
                     <section class="index-main-side">
                         <!-- Partner's Table -->
                         <section class="partners-table">
-                            <div class="partners-table--item">
+                            <div class="partners-table--item" data-categories="Matchmaking,MobileApp">
                                 <div class="partner-logo">
                                     <img src="img/partners/partner-2.svg" alt="">
                                 </div>
                                 <div class="partner-info">
                                     <div class="icons">
-                                        <i></i>
-                                        <i></i>
-                                        <i></i>
-                                        <i></i>
+                                        <div class="icon">
+                                            <span class="tooltip-text">Compatibility</span>
+                                            <img src="img/layers/compatibility.svg" alt="">
+                                        </div>
+                                        <div class="icon">
+                                            <span class="tooltip-text">Matchmaking</span>
+                                            <img src="img/layers/matchmaking.svg" alt="">
+                                        </div>
+                                        <div class="icon">
+                                            <span class="tooltip-text">Mobile App</span>
+                                            <img src="img/layers/mobile-app.svg" alt="">
+                                        </div>
+                                        <div class="icon">
+                                            <span class="tooltip-text">Photo Search</span>
+                                            <img src="img/layers/photo-search.svg" alt="">
+                                        </div>
                                     </div>
                                     <div class="highlights">
                                         <ul>
@@ -170,7 +185,7 @@
                                 </div>
                                 <div class="partner-rank">
                                     <h1>9.8</h1>
-                                    <span>Rate it (1382)</span>
+                                    <span class="rate-count">Rate it (<span class="count">1382</span>)</span>
                                     <div class='rating-stars'>
                                         <ul id='stars'>
                                             <li class='star selected' data-value='1'>
@@ -192,21 +207,32 @@
                                     </div>
                                 </div>
                                 <div class="partner-button">
-                                    <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit
-                                        Site</a>
-                                    <a class="partner-link" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Read Review</a>
+                                    <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit Site</a>
+                                    <a class="partner-link" href="review.html">Read Review</a>
                                 </div>
                             </div>
-                            <div class="partners-table--item">
+                            <div class="partners-table--item" data-categories="Matchmaking,MobileApp">
                                 <div class="partner-logo">
                                     <img src="img/partners/partner-2.svg" alt="">
                                 </div>
                                 <div class="partner-info">
                                     <div class="icons">
-                                        <i></i>
-                                        <i></i>
-                                        <i></i>
-                                        <i></i>
+                                        <div class="icon">
+                                            <span class="tooltip-text">Compatibility</span>
+                                            <img src="img/layers/compatibility.svg" alt="">
+                                        </div>
+                                        <div class="icon">
+                                            <span class="tooltip-text">Matchmaking</span>
+                                            <img src="img/layers/matchmaking.svg" alt="">
+                                        </div>
+                                        <div class="icon">
+                                            <span class="tooltip-text">Mobile App</span>
+                                            <img src="img/layers/mobile-app.svg" alt="">
+                                        </div>
+                                        <div class="icon">
+                                            <span class="tooltip-text">Photo Search</span>
+                                            <img src="img/layers/photo-search.svg" alt="">
+                                        </div>
                                     </div>
                                     <div class="highlights">
                                         <ul>
@@ -220,8 +246,8 @@
                                     </div>
                                 </div>
                                 <div class="partner-rank">
-                                    <h1>8.9</h1>
-                                    <span>Rate it (1122)</span>
+                                    <h1>9.8</h1>
+                                    <span class="rate-count">Rate it (<span class="count">1382</span>)</span>
                                     <div class='rating-stars'>
                                         <ul id='stars'>
                                             <li class='star selected' data-value='1'>
@@ -243,12 +269,196 @@
                                     </div>
                                 </div>
                                 <div class="partner-button">
-                                    <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit
-                                        Site</a>
-                                    <a class="partner-link" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Read Review</a>
+                                    <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit Site</a>
+                                    <a class="partner-link" href="review.html">Read Review</a>
                                 </div>
                             </div>
-
+                            <div class="partners-table--item" data-categories="Matchmaking,MobileApp">
+                                <div class="partner-logo">
+                                    <img src="img/partners/partner-2.svg" alt="">
+                                </div>
+                                <div class="partner-info">
+                                    <div class="icons">
+                                        <div class="icon">
+                                            <span class="tooltip-text">Compatibility</span>
+                                            <img src="img/layers/compatibility.svg" alt="">
+                                        </div>
+                                        <div class="icon">
+                                            <span class="tooltip-text">Matchmaking</span>
+                                            <img src="img/layers/matchmaking.svg" alt="">
+                                        </div>
+                                        <div class="icon">
+                                            <span class="tooltip-text">Mobile App</span>
+                                            <img src="img/layers/mobile-app.svg" alt="">
+                                        </div>
+                                        <div class="icon">
+                                            <span class="tooltip-text">Photo Search</span>
+                                            <img src="img/layers/photo-search.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="highlights">
+                                        <ul>
+                                            <li>
+                                                Hohes Bildungsniveau der Mitglieder (über 50% Akademiker)
+                                            </li>
+                                            <li>
+                                                Gut geeignet für Neulinge, Berufstätige und Singles mit wenig Zeit
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="partner-rank">
+                                    <h1>9.8</h1>
+                                    <span class="rate-count">Rate it (<span class="count">1382</span>)</span>
+                                    <div class='rating-stars'>
+                                        <ul id='stars'>
+                                            <li class='star selected' data-value='1'>
+                                                <i>★</i>
+                                            </li>
+                                            <li class='star selected' data-value='2'>
+                                                <i>★</i>
+                                            </li>
+                                            <li class='star selected' data-value='3'>
+                                                <i>★</i>
+                                            </li>
+                                            <li class='star' data-value='4'>
+                                                <i>★</i>
+                                            </li>
+                                            <li class='star' data-value='5'>
+                                                <i>★</i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="partner-button">
+                                    <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit Site</a>
+                                    <a class="partner-link" href="review.html">Read Review</a>
+                                </div>
+                            </div>
+                            <div class="partners-table--item" data-categories="Matchmaking,MobileApp">
+                                <div class="partner-logo">
+                                    <img src="img/partners/partner-2.svg" alt="">
+                                </div>
+                                <div class="partner-info">
+                                    <div class="icons">
+                                        <div class="icon">
+                                            <span class="tooltip-text">Compatibility</span>
+                                            <img src="img/layers/compatibility.svg" alt="">
+                                        </div>
+                                        <div class="icon">
+                                            <span class="tooltip-text">Matchmaking</span>
+                                            <img src="img/layers/matchmaking.svg" alt="">
+                                        </div>
+                                        <div class="icon">
+                                            <span class="tooltip-text">Mobile App</span>
+                                            <img src="img/layers/mobile-app.svg" alt="">
+                                        </div>
+                                        <div class="icon">
+                                            <span class="tooltip-text">Photo Search</span>
+                                            <img src="img/layers/photo-search.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="highlights">
+                                        <ul>
+                                            <li>
+                                                Hohes Bildungsniveau der Mitglieder (über 50% Akademiker)
+                                            </li>
+                                            <li>
+                                                Gut geeignet für Neulinge, Berufstätige und Singles mit wenig Zeit
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="partner-rank">
+                                    <h1>9.8</h1>
+                                    <span class="rate-count">Rate it (<span class="count">1382</span>)</span>
+                                    <div class='rating-stars'>
+                                        <ul id='stars'>
+                                            <li class='star selected' data-value='1'>
+                                                <i>★</i>
+                                            </li>
+                                            <li class='star selected' data-value='2'>
+                                                <i>★</i>
+                                            </li>
+                                            <li class='star selected' data-value='3'>
+                                                <i>★</i>
+                                            </li>
+                                            <li class='star' data-value='4'>
+                                                <i>★</i>
+                                            </li>
+                                            <li class='star' data-value='5'>
+                                                <i>★</i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="partner-button">
+                                    <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit Site</a>
+                                    <a class="partner-link" href="review.html">Read Review</a>
+                                </div>
+                            </div>
+                            <div class="partners-table--item" data-categories="Matchmaking,MobileApp">
+                                <div class="partner-logo">
+                                    <img src="img/partners/partner-2.svg" alt="">
+                                </div>
+                                <div class="partner-info">
+                                    <div class="icons">
+                                        <div class="icon">
+                                            <span class="tooltip-text">Compatibility</span>
+                                            <img src="img/layers/compatibility.svg" alt="">
+                                        </div>
+                                        <div class="icon">
+                                            <span class="tooltip-text">Matchmaking</span>
+                                            <img src="img/layers/matchmaking.svg" alt="">
+                                        </div>
+                                        <div class="icon">
+                                            <span class="tooltip-text">Mobile App</span>
+                                            <img src="img/layers/mobile-app.svg" alt="">
+                                        </div>
+                                        <div class="icon">
+                                            <span class="tooltip-text">Photo Search</span>
+                                            <img src="img/layers/photo-search.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="highlights">
+                                        <ul>
+                                            <li>
+                                                Hohes Bildungsniveau der Mitglieder (über 50% Akademiker)
+                                            </li>
+                                            <li>
+                                                Gut geeignet für Neulinge, Berufstätige und Singles mit wenig Zeit
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="partner-rank">
+                                    <h1>9.8</h1>
+                                    <span class="rate-count">Rate it (<span class="count">1382</span>)</span>
+                                    <div class='rating-stars'>
+                                        <ul id='stars'>
+                                            <li class='star selected' data-value='1'>
+                                                <i>★</i>
+                                            </li>
+                                            <li class='star selected' data-value='2'>
+                                                <i>★</i>
+                                            </li>
+                                            <li class='star selected' data-value='3'>
+                                                <i>★</i>
+                                            </li>
+                                            <li class='star' data-value='4'>
+                                                <i>★</i>
+                                            </li>
+                                            <li class='star' data-value='5'>
+                                                <i>★</i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="partner-button">
+                                    <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit Site</a>
+                                    <a class="partner-link" href="review.html">Read Review</a>
+                                </div>
+                            </div>
                         </section>
                         <!-- /Partner's Table -->
                         <!-- Index Bottom Text -->
@@ -291,7 +501,63 @@
                                 ou
                                 ordinateur.
                             </p>
+                            <p>
+                                Les frais bancaires sont presque inexistants et toujours transparents, vous
+                                n’aurez
+                                donc jamais de mauvaises surprises. Tous les virements, prélèvements,
+                                retraits et
+                                autres opérations bancaires sont complétement gratuits en France et dans la
+                                zone euro.
+                                De plus, la carte bancaire ainsi que les chéquiers vous sont offerts ainsi
+                                que les
+                                avantages qui y sont rattachés tels sque des assurances voyages ou des
+                                promotions
+                                partenaires.
+                            </p>
+                            <p>
+                                La gestion de votre compte, de votre budget et de vos dépenses est
+                                également rendu
+                                beaucoup plus simple grâce à des applications mobiles innovantes et simple
+                                d’utilisation. Vous avez donc un contrôle total sur votre argent et sur les
+                                produits
+                                bancaires tels que les
+                                crédits ou livrets auxquels vous pouvez souscrire en ligne en quelques
+                                secondes. Il est
+                                également possible d’effectuer toutes les transactions et opérations
+                                bancaires ainsi
+                                que des prévisions budgétaires en direct depuis votre téléphone, tablette
+                                ou
+                                ordinateur.
+                            </p>
                             <h1>Is it worth it to pay for a membership?</h1>
+                            <p>
+                                Les frais bancaires sont presque inexistants et toujours transparents, vous
+                                n’aurez
+                                donc jamais de mauvaises surprises. Tous les virements, prélèvements,
+                                retraits et
+                                autres opérations bancaires sont complétement gratuits en France et dans la
+                                zone euro.
+                                De plus, la carte bancaire ainsi que les chéquiers vous sont offerts ainsi
+                                que les
+                                avantages qui y sont rattachés tels sque des assurances voyages ou des
+                                promotions
+                                partenaires.
+                            </p>
+                            <p>
+                                La gestion de votre compte, de votre budget et de vos dépenses est
+                                également rendu
+                                beaucoup plus simple grâce à des applications mobiles innovantes et simple
+                                d’utilisation. Vous avez donc un contrôle total sur votre argent et sur les
+                                produits
+                                bancaires tels que les
+                                crédits ou livrets auxquels vous pouvez souscrire en ligne en quelques
+                                secondes. Il est
+                                également possible d’effectuer toutes les transactions et opérations
+                                bancaires ainsi
+                                que des prévisions budgétaires en direct depuis votre téléphone, tablette
+                                ou
+                                ordinateur.
+                            </p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem est exercitationem doloribus
                                 eius blanditiis velit unde quae, consectetur assumenda quaerat eum consequuntur commodi,
                                 dignissimos nobis veniam rerum culpa voluptas repudiandae?</p>
