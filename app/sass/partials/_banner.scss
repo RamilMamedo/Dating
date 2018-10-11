@@ -14,16 +14,27 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media only screen and (max-width: $breakpoint-lg) {
+      flex-direction: column-reverse;
+    }
     .banner-content {
       color: $white;
       text-align: left;
       flex-grow: 1;
       flex-basis: 0;
+      @media only screen and (max-width: $breakpoint-lg) {
+        flex-grow: unset;
+        flex-basis: unset;
+        text-align: center;
+      }
       h1 {
         margin-bottom: 7px;
         font-size: 28px;
         font-weight: bold;
         line-height: 42px;
+        @media only screen and (max-width: $breakpoint-lg) {
+          text-transform: uppercase;
+        }
       }
       p {
         font-weight: $fw-300;
@@ -36,6 +47,9 @@
         font-weight: $fw-500;
         text-transform: uppercase;
         padding: 10px 24px;
+        @media only screen and (max-width: $breakpoint-lg) {
+          display: none;
+        }
       }
     }
     .banner-widget {
@@ -44,10 +58,18 @@
       flex-basis: 0;
       display: flex;
       align-items: center;
+      @media only screen and (max-width: $breakpoint-lg) {
+        flex-grow: unset;
+        flex-basis: unset;
+      }
       .laptop {
         width: 670px;
         transform: translate(90px);
         position: relative;
+        @media only screen and (max-width: $breakpoint-lg) {
+          width: unset;
+          transform: unset;
+        }
         .laptop-content {
           position: absolute;
           top: 7%;
@@ -57,12 +79,21 @@
             height: 220px;
             opacity: 0.8;
             border-radius: 4px;
+            @media only screen and (max-width: $breakpoint-lg) {
+              flex-grow: unset;
+              flex-basis: unset;
+              width: 360px;
+              height: 234px;
+            }
           }
         }
       }
       .phone {
         position: relative;
         transform: translateY(-20px);
+        @media only screen and (max-width: $breakpoint-lg) {
+          display: none;
+        }
       }
     }
   }

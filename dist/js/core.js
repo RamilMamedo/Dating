@@ -16,66 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
       $('.header .hamburger').removeClass('active');
     });
   }
-  // Filter
-  $('#filter').change(function () {
-    var selectedID = $(this)[0].selectedIndex;
-    var $selected = $(this).children('option:nth-child(' + (selectedID + 1) + ')');
-    var option = $selected.attr('value').replace('option-', '');
-    filterRowsBy(option);
-  });
-  //
-
-
-  function uncheckAllFilters() {
-    $(".table-filter-checkbox").each(function () {
-      if (this.value !== "all") {
-        $(this).prop("checked", false);
-      }
-    });
-  }
-
-  function uncheckSelectAllFilter() {
-    $(".table-filter-checkbox[value='all']").prop("checked", false);
-  }
-
-  $(".table-filter-checkbox").each(function () {
-    $(this).on("change", function (e) {
-      var value = e.currentTarget.value;
-      var wrapper = $('.partners-table');
-      console.log(value);
-
-      wrapper.find(".partners-table--item").each(function () {
-        var item = $(this);
-
-        if (value === "all") {
-          uncheckAllFilters();
-          item.show();
-        } else {
-          uncheckSelectAllFilter();
-          var itemCategories = item.attr("data-categories");
-          var selectedCategories = $(".table-filter-checkbox").filter(function (i, item) {
-            return item.checked === true;
-          }).map(function (i, item) {
-            return item.value;
-          });
-
-          var includeAll = true;
-          for (var i = 0; i < selectedCategories.length; i++) {
-            if (itemCategories.indexOf(selectedCategories[i]) === -1) {
-              includeAll = false;
-              break;
-            }
-          }
-
-          if (includeAll) {
-            item.show();
-          } else {
-            item.hide();
-          }
-        }
-      });
-    });
-  });
 
   //  Rating Stars
   $('#stars li').on('mouseover', function () {
@@ -159,6 +99,39 @@ document.addEventListener('DOMContentLoaded', function () {
       disableOnInteraction: false
     }
   });
+
+  $(function () {
+    var $container = $('.index .partners-table'),
+        $checkboxes = $('.filter-block input');
+
+    $container.isotope({
+      itemSelector: '.item'
+    });
+
+    $checkboxes.change(function () {
+      var filters = [];
+      // get checked checkboxes values
+      $checkboxes.filter(':checked').each(function () {
+        filters.push(this.value);
+      });
+      filters = filters.join(', ');
+      $container.isotope({ filter: filters });
+      checkResults();
+    });
+
+    // Function to check if filters have some results
+    function checkResults() {
+      var visibleItemsCount = $container.data('isotope').filteredItems.length;
+      if (visibleItemsCount > 0) {
+        $('.no-results').hide();
+        $('.index-bottom-text').css('marginTop', '45px');
+      } else {
+        $('.no-results').show();
+        $('.index-bottom-text').css('marginTop', '90px');
+      }
+    }
+  });
+
   //   Filtering reviews
   function filterRowsBy(options) {
     $('.partners-table--item').each(function () {

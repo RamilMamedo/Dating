@@ -97,7 +97,7 @@
                     <div class="laptop">
                         <img src="img/laptop.png" alt="">
                         <div class="laptop-content">
-                            <img src="https://picsum.photos/335/220/?random" alt="">
+                            <img src="https://picsum.photos/430/280/?random" alt="">
                         </div>
                     </div>
                     <div class="phone">
@@ -109,6 +109,7 @@
     </section>
     <!-- /Page Banner -->
 
+
     <!-- Filter -->
     <section class="filter-by">
         <div class="container">
@@ -119,21 +120,24 @@
                 fugiat nulla pariatur.</p>
             <div class="filter-block">
                 <label>Filter By:</label>
-
-                <label class="checkbox-block">Compatibility Test
-                    <input class="table-filter-checkbox" type="checkbox">
+                <label class="checkbox-block" for="compatibility">
+                    Compatibility Test
+                    <input type="checkbox" name="compatibility" value=".compatibility" id="compatibility">
                     <span class="checkmark"></span>
                 </label>
-                <label class="checkbox-block">Matchmaking
-                    <input class="table-filter-checkbox" type="checkbox">
+                <label class="checkbox-block" for="matchmaking">
+                    Matchmaking
+                    <input type="checkbox" name="matchmaking" value=".matchmaking" id="matchmaking">
                     <span class="checkmark"></span>
                 </label>
-                <label class="checkbox-block">Photo Search
-                    <input class="table-filter-checkbox" type="checkbox">
+                <label class="checkbox-block" for="photo">
+                    Photo Search
+                    <input type="checkbox" name="photo" value=".photo" id="photo">
                     <span class="checkmark"></span>
                 </label>
-                <label class="checkbox-block">Mobil App
-                    <input class="table-filter-checkbox" type="checkbox">
+                <label class="checkbox-block" for="mobile">
+                    Mobile App
+                    <input type="checkbox" name="mobile" value=".mobile" id="mobile">
                     <span class="checkmark"></span>
                 </label>
             </div>
@@ -149,7 +153,7 @@
                     <section class="index-main-side">
                         <!-- Partner's Table -->
                         <section class="partners-table">
-                            <div class="partners-table--item" data-categories="Matchmaking,MobileApp">
+                            <div class="partners-table--item item compatibility">
                                 <div class="partner-logo">
                                     <img src="img/partners/partner-2.svg" alt="">
                                 </div>
@@ -211,7 +215,7 @@
                                     <a class="partner-link" href="review.html">Read Review</a>
                                 </div>
                             </div>
-                            <div class="partners-table--item" data-categories="Matchmaking,MobileApp">
+                            <div class="partners-table--item item matchmaking">
                                 <div class="partner-logo">
                                     <img src="img/partners/partner-2.svg" alt="">
                                 </div>
@@ -273,7 +277,7 @@
                                     <a class="partner-link" href="review.html">Read Review</a>
                                 </div>
                             </div>
-                            <div class="partners-table--item" data-categories="Matchmaking,MobileApp">
+                            <div class="partners-table--item item matchmaking">
                                 <div class="partner-logo">
                                     <img src="img/partners/partner-2.svg" alt="">
                                 </div>
@@ -335,7 +339,7 @@
                                     <a class="partner-link" href="review.html">Read Review</a>
                                 </div>
                             </div>
-                            <div class="partners-table--item" data-categories="Matchmaking,MobileApp">
+                            <div class="partners-table--item item photo">
                                 <div class="partner-logo">
                                     <img src="img/partners/partner-2.svg" alt="">
                                 </div>
@@ -397,67 +401,8 @@
                                     <a class="partner-link" href="review.html">Read Review</a>
                                 </div>
                             </div>
-                            <div class="partners-table--item" data-categories="Matchmaking,MobileApp">
-                                <div class="partner-logo">
-                                    <img src="img/partners/partner-2.svg" alt="">
-                                </div>
-                                <div class="partner-info">
-                                    <div class="icons">
-                                        <div class="icon">
-                                            <span class="tooltip-text">Compatibility</span>
-                                            <img src="img/layers/compatibility.svg" alt="">
-                                        </div>
-                                        <div class="icon">
-                                            <span class="tooltip-text">Matchmaking</span>
-                                            <img src="img/layers/matchmaking.svg" alt="">
-                                        </div>
-                                        <div class="icon">
-                                            <span class="tooltip-text">Mobile App</span>
-                                            <img src="img/layers/mobile-app.svg" alt="">
-                                        </div>
-                                        <div class="icon">
-                                            <span class="tooltip-text">Photo Search</span>
-                                            <img src="img/layers/photo-search.svg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="highlights">
-                                        <ul>
-                                            <li>
-                                                Hohes Bildungsniveau der Mitglieder (über 50% Akademiker)
-                                            </li>
-                                            <li>
-                                                Gut geeignet für Neulinge, Berufstätige und Singles mit wenig Zeit
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="partner-rank">
-                                    <h1>9.8</h1>
-                                    <span class="rate-count">Rate it (<span class="count">1382</span>)</span>
-                                    <div class='rating-stars'>
-                                        <ul id='stars'>
-                                            <li class='star selected' data-value='1'>
-                                                <i>★</i>
-                                            </li>
-                                            <li class='star selected' data-value='2'>
-                                                <i>★</i>
-                                            </li>
-                                            <li class='star selected' data-value='3'>
-                                                <i>★</i>
-                                            </li>
-                                            <li class='star' data-value='4'>
-                                                <i>★</i>
-                                            </li>
-                                            <li class='star' data-value='5'>
-                                                <i>★</i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="partner-button">
-                                    <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit Site</a>
-                                    <a class="partner-link" href="review.html">Read Review</a>
-                                </div>
+                            <div class="no-results">
+                                <h1>No Results</h1>
                             </div>
                         </section>
                         <!-- /Partner's Table -->
@@ -612,14 +557,20 @@
     <!-- Site Bottom -->
     <section class="site-bottom">
         <div class="container">
-            <div class="site-bottom--content">
-                <h1>You wanna fall in love?</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                <div class="btn-groupe">
-                    <a class="btn btn-yes" href="" target="_blank" rel="noopener" data-goal-name="{{ item.name }}">Yes, I want a lover!</a>
-                    <a class="btn btn-no button--quidel" href="" target="_blank" rel="noopener" data-goal-name="{{ item.name }}">No, I will stay alone.</a>
+            <div class="site-bottom-wrapper">
+                <img class="bottom-couple" src="img/layers/couple.svg" alt="couple" />
+                <div class="site-bottom--content">
+                    <h1>You wanna fall in love?</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. </p>
+                    <div class="btn-groupe">
+                        <a class="btn btn-yes" href="" target="_blank" rel="noopener" data-goal-name="{{ item.name }}">Yes, I
+                            want a lover!</a>
+                        <a class="btn btn-no button--quidel" href="" target="_blank" rel="noopener" data-goal-name="{{ item.name }}">No,
+                            I will stay alone.</a>
+                    </div>
+                    <img class="bottom-hearts" src="img/layers/hearts.svg" alt="hearts" />
                 </div>
-                <img class="bottom-hearts" src="img/layers/hearts.svg" alt="hearts" />
             </div>
         </div>
     </section>

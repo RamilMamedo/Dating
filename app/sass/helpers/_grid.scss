@@ -24,6 +24,9 @@ $container-sm-width: 540px;
   @media (min-width: $breakpoint-xl) {
     max-width: $container-xl-width;
   }
+  @media (max-width: $breakpoint-sm) {
+    padding: 0 30px;
+  }
 }
 
 .container-fluid {

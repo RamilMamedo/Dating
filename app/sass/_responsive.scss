@@ -7,19 +7,40 @@
 */
 
 /*! Large Devices, Wide Screens */
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: $breakpoint-xl) {
 }
 
 /*! Medium Devices, Desktops */
-@media only screen and (max-width: 892px) {
+@media only screen and (max-width: $breakpoint-lg) {
+  .footer .navbar {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    order: 2;
+    .copyright {
+      margin-bottom: 31px;
+    }
+    .navbar-brand {
+      order: 1;
+      padding: 23px 0 0;
+    }
+    .navbar-nav {
+      flex-wrap: wrap;
+      flex-direction: column;
+      text-align: center;
+      margin: 12px 0 16px;
+      .nav-item {
+        margin-right: unset;
+      }
+    }
+  }
 }
 
 /*! Small Devices, Tablets */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: $breakpoint-md) {
 }
 
 /*! Extra Small Devices, Phones */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: $breakpoint-sm) {
 }
 
 /*! Custom, iPhone Retina */

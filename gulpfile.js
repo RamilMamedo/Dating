@@ -19,6 +19,7 @@ const gulp = require('gulp'),
       uncss = require('postcss-uncss'),
       purify = require('gulp-purifycss'),
       cleanCSS = require('gulp-clean-css'),
+      gcmq = require('gulp-group-css-media-queries'),
       // JavaScripts
       babel = require('gulp-babel'),
       uglify = require('gulp-uglify');
@@ -131,7 +132,7 @@ Fonts = () => {
 //  Compiling SASS, cutting unused CSS modules, adding prefixes, minifying and renaming the final file...
 gulp.task('style', () => {
   let plugins = [
-    // autoprefixer({browsers: ['last 5 version']}),
+    // autoprefixer({browsers: ['last 2 version']}),
     // cssnano({
     //   safe: true,
     //   discardComments: false,
@@ -146,7 +147,8 @@ gulp.task('style', () => {
     gulp
       .src(paths.scssSrc)
       .pipe(sass({ outputStyle: 'expand' }))
-      // .pipe(purify(['./app/**/*.js', './app/**/*.html']))
+      .pipe(gcmq())
+      .pipe(purify(['./app/**/*.js', './app/**/*.html']))
       // .pipe(cleanCSS({compatibility: "ie8"}))
       .pipe(postcss(plugins))
       .on('error', message => {
@@ -176,6 +178,7 @@ Scripts = () => {
         './app/libs/jquery/jquery.min.js',
         './app/libs/swiper/swiper.min.js',
         './app/libs/resizeSensor.js',
+        './app/libs/isotope.js',
         './app/libs/stickySidebar.js',
         './app/libs/comparisonTable.js',
         './app/libs/articles.js',

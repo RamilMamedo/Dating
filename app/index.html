@@ -2,6 +2,7 @@
 //= ./layouts/partials/header.html
 //= ./layouts/partials/banner.html
 
+
 <!-- Filter -->
 <section class="filter-by">
     <div class="container">
@@ -12,21 +13,24 @@
             fugiat nulla pariatur.</p>
         <div class="filter-block">
             <label>Filter By:</label>
-
-            <label class="checkbox-block">Compatibility Test
-                <input class="table-filter-checkbox" type="checkbox">
+            <label class="checkbox-block" for="compatibility">
+                Compatibility Test
+                <input type="checkbox" name="compatibility" value=".compatibility" id="compatibility">
                 <span class="checkmark"></span>
             </label>
-            <label class="checkbox-block">Matchmaking
-                <input class="table-filter-checkbox" type="checkbox">
+            <label class="checkbox-block" for="matchmaking">
+                Matchmaking
+                <input type="checkbox" name="matchmaking" value=".matchmaking" id="matchmaking">
                 <span class="checkmark"></span>
             </label>
-            <label class="checkbox-block">Photo Search
-                <input class="table-filter-checkbox" type="checkbox">
+            <label class="checkbox-block" for="photo">
+                Photo Search
+                <input type="checkbox" name="photo" value=".photo" id="photo">
                 <span class="checkmark"></span>
             </label>
-            <label class="checkbox-block">Mobil App
-                <input class="table-filter-checkbox" type="checkbox">
+            <label class="checkbox-block" for="mobile">
+                Mobile App
+                <input type="checkbox" name="mobile" value=".mobile" id="mobile">
                 <span class="checkmark"></span>
             </label>
         </div>
@@ -43,10 +47,9 @@
                     <!-- Partner's Table -->
                     <section class="partners-table">
                         //= ./layouts/partials/partner-item.html
-                        //= ./layouts/partials/partner-item.html
-                        //= ./layouts/partials/partner-item.html
-                        //= ./layouts/partials/partner-item.html
-                        //= ./layouts/partials/partner-item.html
+                        <div class="no-results">
+                            <h1>No Results</h1>
+                        </div>
                     </section>
                     <!-- /Partner's Table -->
                     <!-- Index Bottom Text -->
